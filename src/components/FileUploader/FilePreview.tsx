@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, FileText, FileImage, FilePdf } from 'lucide-react';
+import { X, FileText, File } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface FilePreviewProps {
@@ -92,7 +92,7 @@ export const FilePreview: React.FC<FilePreviewProps> = ({ file, onRemove, disabl
             onError={() => setError(true)} 
           />
         ) : isPdf ? (
-          <FilePdf size={48} className="text-red-500" />
+          <File size={48} className="text-red-500" />
         ) : (
           <FileText size={48} className="text-muted-foreground" />
         )}

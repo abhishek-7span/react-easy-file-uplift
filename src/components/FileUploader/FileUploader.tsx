@@ -1,9 +1,8 @@
-
 import React, { useRef, useState, useCallback, useMemo } from 'react';
 import { FilePreview } from './FilePreview';
 import { UploadProgress } from './UploadProgress';
 import { ValidationError } from './ValidationError';
-import { FileUploadIcon, X, AlertCircle, CheckCircle } from 'lucide-react';
+import { X, AlertCircle, CheckCircle, UploadCloud } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/components/ui/use-toast';
@@ -343,7 +342,7 @@ export const FileUploader = ({
         aria-label={`${multiple ? 'Select multiple files' : 'Select a file'}`}
       >
         <div className="flex flex-col items-center justify-center gap-4">
-          <FileUploadIcon 
+          <UploadCloud 
             size={40} 
             className={dragActive ? "text-primary" : "text-muted-foreground"} 
             aria-hidden="true" 
